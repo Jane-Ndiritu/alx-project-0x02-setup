@@ -45,6 +45,7 @@ const HomePage: React.FC = () => {
         <title>Airbnb - Vacation Rentals, Cabins, Beach Houses & More</title>
         <meta name="description" content="Find vacation rentals, cabins, beach houses, unique homes and experiences around the world - all made possible by hosts on Airbnb." />
       </Head>
+        <Header />
 
       <div className="relative bg-gradient-to-r from-rose-500 to-rose-600 text-white py-20">
         <div className="container mx-auto px-4 text-center">

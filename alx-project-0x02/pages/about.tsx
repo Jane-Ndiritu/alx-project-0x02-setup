@@ -14,7 +14,7 @@ const AboutPage: React.FC = () => {
         <title>About Airbnb - How we started and where we're going</title>
         <meta name="description" content="Learn about Airbnb's mission to create a world where anyone can belong anywhere." />
       </Head>
-      
+      <Header />
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-12">
