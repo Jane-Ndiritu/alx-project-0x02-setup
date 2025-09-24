@@ -36,6 +36,9 @@ export interface PostFormData {
 }
 export interface UserProps {
   phone: string;
+  address: {
+    street: string;
+    suite: string;
   website: string;
   company: {
     name: string;
