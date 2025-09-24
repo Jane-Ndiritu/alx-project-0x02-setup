@@ -1,8 +1,7 @@
 // pages/about.tsx
 import React from 'react';
 import Head from 'next/head';
-import Button from '../components/common/Button';
-
+import Button from '@/components/common/Button';
 const AboutPage: React.FC = () => {
   const handleButtonClick = (message: string) => {
     alert(message);
