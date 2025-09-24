@@ -78,3 +78,29 @@ export interface PostFormData {
   title: string;
   content: string;
 }
+export interface ApiPost {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+}
+
+export interface ApiUser {
+  id: number;
+  name: string;
+  username: string;
+  email: string;
+}
+
+export interface Post {
+  id: string;
+  title: string;
+  content: string;
+  createdAt: Date;
+  author: string;
+}
+
+export interface PostFormData {
+  title: string;
+  content: string;
+}

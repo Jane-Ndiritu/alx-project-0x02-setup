@@ -1,4 +1,3 @@
-// pages/posts.tsx
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Header from '../components/layout/Header';
@@ -16,8 +15,7 @@ const PostsPage: React.FC = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        
-        // Fetch posts and users concurrently
+   
         const [postsResponse, usersResponse] = await Promise.all([
           fetch('https://jsonplaceholder.typicode.com/posts'),
           fetch('https://jsonplaceholder.typicode.com/users')
@@ -30,15 +28,12 @@ const PostsPage: React.FC = () => {
         const postsData: ApiPost[] = await postsResponse.json();
         const usersData: ApiUser[] = await usersResponse.json();
 
-        // Create a users map for easy lookup
         const usersMap: { [key: number]: string } = {};
         usersData.forEach(user => {
           usersMap[user.id] = user.name;
         });
 
         setUsers(usersMap);
-
-        // Transform API data to match PostProps interface
         const transformedPosts: PostProps[] = postsData.slice(0, 12).map(post => ({
           id: post.id,
           title: post.title,
@@ -60,7 +55,6 @@ const PostsPage: React.FC = () => {
     fetchData();
   }, []);
 
-  // Handle retry
   const handleRetry = () => {
     window.location.reload();
   };
