@@ -5,21 +5,15 @@ export interface PostProps {
   body: string;
 }
 
+export interface CardProps {
+  title: string;
+  content: string;
+  variant?: 'default' | 'outlined' | 'elevated';
+  size?: 'small' | 'medium' | 'large';
+  className?: string;
+  onClick?: () => void;
+}
 export interface UserProps {
-  id: number;
-  name: string;
-  username: string;
-  email: string;
-  address: {
-    street: string;
-    suite: string;
-    city: string;
-    zipcode: string;
-    geo: {
-      lat: string;
-      lng: string;
-    };
-  };
   phone: string;
   website: string;
   company: {
